@@ -15,7 +15,6 @@ class AudioDataModule(pl.LightningDataModule):
 
     def setup(self, stage: Optional[str]):
         self.dataset = MoisesDataset(self.chunk_files_dir)
-        # Split the dataset into train, val, and test splits.
         dataset_size = len(self.dataset)
         train_size = int(0.8 * dataset_size)
         val_size = int(0.1 * dataset_size)

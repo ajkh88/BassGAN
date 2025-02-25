@@ -33,8 +33,8 @@ if __name__ == "__main__":
 
     torch.set_float32_matmul_precision("medium")
 
-    csv_logger = CSVLogger("logs", "bass-in-a-box")
-    tb_logger = TensorBoardLogger("tb_logs", name="bass-in-a-box")
+    csv_logger = CSVLogger("logs", "bass-gan")
+    tb_logger = TensorBoardLogger("tb_logs", name="bass-gan")
 
     checkpoint_callback = ModelCheckpoint(
         monitor="val_g_loss",
